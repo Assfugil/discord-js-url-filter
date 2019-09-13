@@ -1,0 +1,18 @@
+{
+  "name": "discord-js-url-filter",
+  "version": "1.0.0",
+  "description": "A simple Discord bot script that filters some banned URLs | Made with discord.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "discordjs, url, urlfilter, bot, discord, discordbot"
+  ],
+  "author": "Thanos#7066",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.5.1",
+    "moment": "^2.24.0"
+  }
+}
