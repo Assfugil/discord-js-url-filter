@@ -27,9 +27,7 @@ client.on("message", (message) => {
     return message.channel.send(strings.error_occured + err)
 }
 })
-client.on('error', (error) => {
-console.log('A WebSocket error has occured: ' + error )
-});
+client.on('error', error => console.log('A WebSocket error has occured: ' + error ));
 
 client.on("ready", () => {
     
