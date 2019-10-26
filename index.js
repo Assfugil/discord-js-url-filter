@@ -12,28 +12,21 @@ const token = config.token
 
 client.on("message", (message) => {
   // Message Filter
-  fs.readFile("./data/bannedTerms.json", 'utf8', function(err, termData) {
-    if(err) return message.channel.send(strings.error_occured + err)
-    termData = JSON.parse(termData)
+  try {
+  let termData = JSON.parse(fs.readFileSync("./data/bannedTerms.json", 'utf8'))
     if(termData.includes(message.content)) {
-      message.delete(0).then( () => {
-        message.channel.send(`That URL is banned, ${message.author.tag}.`)
-      })
-      
+      message.delete().then( () => {
+        message.channel.send(`That URL is banned, ${message.author.tag}.`) 
       return;
+      })
     }
     if(message.content.includes(termData)) {
-      message.delete(0).then( () => {
-        message.channel.send(`That URL is banned, ${message.author.tag}.`)
-      })
-      
-      return;
-    }
-    return;
-  });
-return;
-});
-
+      message.delete().then( () =>  message.channel.send(`That URL is banned, ${message.author.tag}.`)
+      )
+        } catch (err)
+    return message.channel.send(strings.error_occured + err)
+}
+})
 client.on('error', (error) => {
 console.log('A WebSocket error has occured: ' + error )
 });
