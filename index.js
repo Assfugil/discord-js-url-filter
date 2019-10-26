@@ -17,14 +17,14 @@ client.on("message", (message) => {
     termData = JSON.parse(termData)
     if(termData.includes(message.content)) {
       message.delete(0).then( () => {
-        message.channel.send("That URL is banned, " + message.author.toString())
+        message.channel.send(`That URL is banned, ${message.author.tag}.`)
       })
       
       return;
     }
     if(message.content.includes(termData)) {
       message.delete(0).then( () => {
-        message.channel.send("That URL is banned, " + message.author.toString())
+        message.channel.send(`That URL is banned, ${message.author.tag}.`)
       })
       
       return;
@@ -35,7 +35,7 @@ return;
 });
 
 client.on('error', (error) => {
-console.log('A WebSocket error has occured: ' + error)
+console.log('A WebSocket error has occured: ' + error )
 });
 
 client.on("ready", () => {
