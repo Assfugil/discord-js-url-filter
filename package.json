@@ -10,9 +10,9 @@
     "discordjs", "url", "urlfilter", "bot, "discord", "discordbot"
   ],
   "author": {
-    "name":"Thanos#7066",
+    "name":"FΛV#1337",
     "discord_user_id":"400581909912223744"
-  }
+  },
   "license": "ISC",
   "dependencies": {
     "discord.js": "^11.5.1",
