@@ -13,7 +13,7 @@
     "name":"FΛV#1337",
     "discord_user_id":"400581909912223744"
   },
-  "bugs":"https://github.com/favianrizqulloh/discord-js-url-filter"
+  "bugs":"https://github.com/favianrizqulloh/discord-js-url-filter",
   "license": "ISC",
   "dependencies": {
     "discord.js": "^11.5.1",
